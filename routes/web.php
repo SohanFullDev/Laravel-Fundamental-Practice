@@ -17,20 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route Grouping */
-Route::group(['prefix' => 'customer'], function(){
-    Route::get('/', function(){
-        return "<h1>Customer List</h1>";
-    });
-
-    Route::get('/create', function(){
-        return "<h1>Customer Create</h1>";
-    });
-
-    Route::get('/show', function(){
-        return "<h1>Customer Show</h1>";
-    });
-
-});
-
+//Route Methods
+/**
+ * GET - Request a resource
+ * POST - Create a new resource
+ * PUT - Update a resource
+ * PATCH - Modify a resource
+ * DELETE - Delete a resource
+ */
 
