@@ -18,7 +18,44 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function(){
-    return view('home');
+
+    $blogs = [
+        [
+            'title' => 'Title one',
+            'body' => 'This is a body text'
+
+        ],
+        [
+            'title' => 'Title Two',
+            'body' => 'This is a body text'
+
+        ],
+        [
+            'title' => 'Title Three',
+            'body' => 'This is a body text'
+
+        ],
+        [
+            'title' => 'Title Four',
+            'body' => 'This is a body text'
+
+        ],
+        [
+            'title' => 'Title Five',
+            'body' => 'This is a body text'
+
+        ]
+        ,
+        [
+            'title' => 'Title Six',
+            'body' => 'This is a body text'
+
+        ]
+
+    ];
+
+
+    return view('home', compact('blogs'));
 });
 
 Route::get('about', function(){
