@@ -26,7 +26,11 @@ Route::get('contact', function(){
 });
 
 Route::get('test', function(){
-    return view('test.index');
+    $test = 'This is test index page.2';
+    $test2 = 'This is test 2';
+
+   // return view('test.index', ['test' => $test]);
+    return view('test.index', compact('test','test2'));
 });
 
 /**Fallback Route */
