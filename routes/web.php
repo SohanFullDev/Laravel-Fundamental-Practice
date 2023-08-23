@@ -18,11 +18,15 @@ Route::get('/', function () {
 });
 
 Route::get('about', function(){
-    return "<h1>About Page</h1>";
+    return view('about');
 });
 
 Route::get('contact', function(){
-    return "<h1>Contact Page</h1>";
+    return view('contact');
+});
+
+Route::get('test', function(){
+    return view('test.index');
 });
 
 /**Fallback Route */
