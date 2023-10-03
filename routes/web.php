@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,52 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function(){
-
-    $blogs = [
-        [
-            'title' => 'Title one',
-            'body' => 'This is a body text',
-            'status' => 0
-
-        ],
-        [
-            'title' => 'Title Two',
-            'body' => 'This is a body text',
-            'status' => 0
-
-        ],
-        [
-            'title' => 'Title Three',
-            'body' => 'This is a body text',
-            'status' => 0
-
-        ],
-        [
-            'title' => 'Title Four',
-            'body' => 'This is a body text',
-            'status' => 0
-
-        ],
-        [
-            'title' => 'Title Five',
-            'body' => 'This is a body text',
-            'status' => 1
-
-        ]
-        ,
-        [
-            'title' => 'Title Six',
-            'body' => 'This is a body text',
-            'status' => 0
-
-        ]
-
-    ];
-
-
-    return view('home', compact('blogs'));
-});
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('about', function(){
     return view('about');
