@@ -45,12 +45,24 @@
 
     @php
        // echo 'Hello World';
-       $data = true;
+      // $data = true;
+      $i = 2;
     @endphp
 
-    @isset($data)
+    @switch($i)
+        @case(1)
+            <div class="alert alert-danger">Danger</div>
+            @break
+        @case(2)
+            <div class="alert alert-success">Success</div>
+            @break
+        @default
+            <div class="alert alert-warning">Warning</div>
+    @endswitch
+
+  {{--   @isset($data)
         <div class="alert alert-success">Success</div>
-    @endisset
+    @endisset --}}
     </div>
 
 </main>
