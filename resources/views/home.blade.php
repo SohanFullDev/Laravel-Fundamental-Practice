@@ -42,6 +42,15 @@
 
     @endforeach
 {{-- @endfor --}}
+
+    @php
+       // echo 'Hello World';
+       $data = true;
+    @endphp
+
+    @isset($data)
+        <div class="alert alert-success">Success</div>
+    @endisset
     </div>
 
 </main>
