@@ -23,7 +23,7 @@ Route::get('/home', function(){
         [
             'title' => 'Title one',
             'body' => 'This is a body text',
-            'status' => 1
+            'status' => 0
 
         ],
         [
@@ -35,7 +35,7 @@ Route::get('/home', function(){
         [
             'title' => 'Title Three',
             'body' => 'This is a body text',
-            'status' => 1
+            'status' => 0
 
         ],
         [

@@ -13,7 +13,6 @@
 
         @if ($blog['status']==1)
 
-
        <div class="col-md-4">
         <div class="card">
             <div class="card-body">
@@ -22,11 +21,21 @@
 
                 <h2>{{ $blog['title'] }}</h2>
                 <p>{{ $blog['body'] }}</p>
-                <p>{{ $blog['status'] }}</p>
+
 
             </div>
         </div>
+    </div>
+    @else
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h2>{{ $blog['title'] }}</h2>
+                <p>{{ $blog['body'] }}</p>
+               <div class="btn-sm btn-warning">Pending</div>
 
+            </div>
+        </div>
     </div>
 
     @endif
