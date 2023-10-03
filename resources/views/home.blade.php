@@ -7,21 +7,32 @@
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum pariatur ratione quaerat vero a, ullam reiciendis earum distinctio nihil exercitationem quidem neque odit aliquid quasi esse, repudiandae, adipisci non placeat.
 
     <div class="row mt-5">
-      @for ( $i= 0;  $i< count($blogs); $i++)
+     {{--  @for ( $i= 0;  $i< count($blogs); $i++) --}}
+
+        @foreach ( $blogs as $blog)
+
+        @if ($blog['status']==1)
 
 
        <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h2> {{ $blogs[$i]['title'] }}</h2>
-                <p>{{ $blogs[$i]['body'] }}</p>
+               {{--  <h2> {{ $blogs[$i]['title'] }}</h2>
+                <p>{{ $blogs[$i]['body'] }}</p> --}}
+
+                <h2>{{ $blog['title'] }}</h2>
+                <p>{{ $blog['body'] }}</p>
+                <p>{{ $blog['status'] }}</p>
 
             </div>
         </div>
 
     </div>
-    @endfor
 
+    @endif
+
+    @endforeach
+{{-- @endfor --}}
     </div>
 
 </main>

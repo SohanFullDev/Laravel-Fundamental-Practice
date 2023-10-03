@@ -22,33 +22,39 @@ Route::get('/home', function(){
     $blogs = [
         [
             'title' => 'Title one',
-            'body' => 'This is a body text'
+            'body' => 'This is a body text',
+            'status' => 1
 
         ],
         [
             'title' => 'Title Two',
-            'body' => 'This is a body text'
+            'body' => 'This is a body text',
+            'status' => 0
 
         ],
         [
             'title' => 'Title Three',
-            'body' => 'This is a body text'
+            'body' => 'This is a body text',
+            'status' => 1
 
         ],
         [
             'title' => 'Title Four',
-            'body' => 'This is a body text'
+            'body' => 'This is a body text',
+            'status' => 0
 
         ],
         [
             'title' => 'Title Five',
-            'body' => 'This is a body text'
+            'body' => 'This is a body text',
+            'status' => 1
 
         ]
         ,
         [
             'title' => 'Title Six',
-            'body' => 'This is a body text'
+            'body' => 'This is a body text',
+            'status' => 0
 
         ]
 
